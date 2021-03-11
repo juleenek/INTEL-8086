@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.main{
+    background-color: rgba(228, 228, 228, 0.678);
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 300px;
+    top: 5em;
+    left: 15em;
+    padding: 20px;
+    height: 28em;
+    width: 45em;
+}
+.main>h2{
+    font-family: "Orbitron", sans-serif;
+    font-size: 20px;
+}
+.registers{
+    top: 80px;
+}
+.bx{
+    top: 50px;
+}
+.cx{
+    top: 100px;
+}
+.dx{
+    top: 150px;
+}
+.ax>input, .bx>input, .cx>input, .dx>input{ 
+    left: 40px;
+    top: 2px;
+}
+.high_register{
+    top: 80px;
+    left: 250px;
+}
+.bh{
+    top: 50px;
+}
+.ch{
+    top: 100px;
+}
+.dh{
+    top: 150px;
+}
+.ah>input, .bh>input, .ch>input, .dh>input{
+    left: 40px;
+    top: 2px;
+}
+.low_register{
+    top: 80px;
+    left: 480px;
+}
+.bl{
+    top: 50px;
+}
+.cl{
+    top: 100px;
+}
+.dl{
+    top: 150px;
+}
+.al>input, .bl>input, .cl>input, .dl>input{
+    left: 40px;
+    top: 2px;
+} 
+.checkbox1{
+    top: 300px;
+}
+.check_bx1{
+    top: 40px;
+}
+.check_cx1{
+    top: 80px;
+}
+.check_dx1{
+    top: 120px;
+}
+.check_ax1>input, .check_bx1>input, .check_cx1>input, .check_dx1>input{
+left: 40px;
+top: 7px;
+}
+.checkbox2{
+    left: 100px;
+}
+.checkboxes{
+    top: 0;
+    left: 50px;
+}
