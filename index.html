@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>INTEL 8086 simulator</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Montserrat:wght@500&family=Orbitron:wght@500&display=swap"
       rel="stylesheet"
@@ -19,72 +18,62 @@
   <body>
     <div class="main">
       <h2>Symulator procesora INTEL 8086</h2>
-      <div class="registers">
-        <div class="ax">
-          <p>AX</p>
-          <input type="text" />
+      <div class="mini_main">
+        <div class = "input_registers">
+          <div class="registers">
+              <div class="register_name">
+                <p>AX</p>
+                <p>BX</p>
+                <p>CX</p>
+                <p>DX</p>
+              </div>
+              <div class="register_results">
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+              </div>
+  
+          </div>
+          <div class="high_low">
+            <div class="high_register">
+              <div class="ah">AH <input type="text" /></div>
+              <div class="bh">BH <input type="text" /></div>
+              <div class="ch">CH <input type="text" /></div>
+              <div class="dh">DH <input type="text" /></div>
+            </div>
+            <div class="low_register">
+              <div class="al">AL <input type="text" /></div>
+              <div class="bl">BL <input type="text" /></div>
+              <div class="cl">CL <input type="text" /></div>
+              <div class="dl">DL <input type="text" /></div>
+            </div>
+          </div>
         </div>
-        <div class="bx">
-          <p>BX</p>
-          <input type="text" />
-        </div>
-        <div class="cx">
-          <p>CX</p>
-          <input type="text" />
-        </div>
-        <div class="dx">
-          <p>DX</p>
-          <input type="text" />
+        <div class="all_buttons">
+          <div class="top_buttons"> 
+            <div class="button"><button>MOV</button></div>
+            <div class="button"><button>XCHG</button></div>
+          </div>
+          <div class="bottom_buttons"> 
+            <div class="button"><button>RANDOM</button></div>
+            <div class="button"><button>EMPTY</button></div>
+          </div>
         </div>
       </div>
-      <div class="high_register">
-        <div class="ah">AH <input type="text" /></div>
-        <div class="bh">BH <input type="text" /></div>
-        <div class="ch">CH <input type="text" /></div>
-        <div class="dh">DH <input type="text" /></div>
-      </div>
-      <div class="low_register">
-        <div class="al">AL <input type="text" /></div>
-        <div class="bl">BL <input type="text" /></div>
-        <div class="cl">CL <input type="text" /></div>
-        <div class="dl">DL <input type="text" /></div>
-      </div>
-      <div class="checkboxes">
-          <div class="checkbox1">
-            <div class="check_ax1">
-              <p>AX</p>
-              <input type="checkbox" />
-            </div>
-            <div class="check_bx1">
-              <p>BX</p>
-              <input type="checkbox" />
-            </div>
-            <div class="check_cx1">
-              <p>CX</p>
-              <input type="checkbox" />
-            </div>
-            <div class="check_dx1">
-              <p>DX</p>
-              <input type="checkbox" />
-            </div>
-            <div class="checkbox2">
-                <div class="check_ax1">
-                  <p>AX</p>
-                  <input type="checkbox" />
-                </div>
-                <div class="check_bx1">
-                  <p>BX</p>
-                  <input type="checkbox" />
-                </div>
-                <div class="check_cx1">
-                  <p>CX</p>
-                  <input type="checkbox" />
-                </div>
-                <div class="check_dx1">
-                  <p>DX</p>
-                  <input type="checkbox" />
-                </div>
-      </div>
+      <div class="choice_space">
+        <div class="choice">
+          <div class="first_register"></div>
+          <div class="second_register"></div>
+        </div>
+        <div class="choice">
+          <div class="first_register"></div>
+          <div class="second_register"></div>
+        </div>
+        <div class="choice">
+          <div class="first_register"></div>
+          <div class="second_register"></div>
+        </div>
       </div>
     </div>
   </body>

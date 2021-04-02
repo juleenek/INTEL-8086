@@ -1,93 +1,139 @@
-*{
+body{
     margin: 0;
-    padding: 0;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    background-color: #2a31311c;
 }
 
 .main{
-    background-color: rgba(228, 228, 228, 0.678);
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-style: ridge;
+    border-width: 10px;
     font-family: 'Noto Sans JP', sans-serif;
-    width: 300px;
-    top: 5em;
-    left: 15em;
+    width: 700px;
     padding: 20px;
-    height: 28em;
-    width: 45em;
+    height: 470px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mini_main{
+    display: flex;
+    margin-top: 10px;
 }
 .main>h2{
     font-family: "Orbitron", sans-serif;
     font-size: 20px;
 }
+.main>h2:hover{
+    color: #24719b;
+}
+.input_registers{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 500px;
+    height: 300px;
+=
+}
 .registers{
-    top: 80px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    border-style: ridge;
+    background-color: #dddddd;
+    text-shadow: 1px 2px #a1a0a0;
 }
-.bx{
-    top: 50px;
+.input_registers input{
+    width: 50px;
+    height: 40px;
+    border: 2px solid black;
+    font-size: 20px;
+    text-align: center;
 }
-.cx{
-    top: 100px;
+.high_register, .low_register{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;;
+    font-size: 20px;
 }
-.dx{
-    top: 150px;
+.register_results{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-.ax>input, .bx>input, .cx>input, .dx>input{ 
-    left: 40px;
-    top: 2px;
+.result{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 2px solid black;
 }
-.high_register{
-    top: 80px;
-    left: 250px;
+.register_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
 }
-.bh{
-    top: 50px;
+.high_low{
+    display: flex;
+    justify-content: space-around;
+    background-color: #dddddd;
+    width: 250px;
+    border-style: ridge;
+    text-shadow: 1px 2px #a1a0a0;
 }
-.ch{
-    top: 100px;
+.all_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-style: ridge;
+    background-color: #dddddd;
+    width: 200px;
+    justify-content: space-around;
 }
-.dh{
-    top: 150px;
+.all_buttons button{
+    width: 170px;
+    height: 50px;
+    margin: 5px;
+    background-color: gray;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 2px 2px #000000;
 }
-.ah>input, .bh>input, .ch>input, .dh>input{
-    left: 40px;
-    top: 2px;
+.top_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 47%;
+    text-align: center;
 }
-.low_register{
-    top: 80px;
-    left: 480px;
+.bottom_buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 47%;
+    text-align: center;
 }
-.bl{
-    top: 50px;
+.choice_space{
+    display: flex;
+    background-color: bisque;
+    width: 680px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+    justify-content: space-between;
 }
-.cl{
-    top: 100px;
-}
-.dl{
-    top: 150px;
-}
-.al>input, .bl>input, .cl>input, .dl>input{
-    left: 40px;
-    top: 2px;
-} 
-.checkbox1{
-    top: 300px;
-}
-.check_bx1{
-    top: 40px;
-}
-.check_cx1{
-    top: 80px;
-}
-.check_dx1{
-    top: 120px;
-}
-.check_ax1>input, .check_bx1>input, .check_cx1>input, .check_dx1>input{
-left: 40px;
-top: 7px;
-}
-.checkbox2{
-    left: 100px;
-}
-.checkboxes{
-    top: 0;
-    left: 50px;
+.choice{
+    width: 220px;
+    height: 100px;
+    background-color: cadetblue;
 }
