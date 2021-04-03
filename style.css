@@ -37,13 +37,11 @@ body{
     justify-content: space-around;
     width: 500px;
     height: 300px;
-=
 }
 .registers{
     width: 200px;
     display: flex;
     flex-direction: row;
-    margin-left: 15px;
     border-style: ridge;
     background-color: #dddddd;
     text-shadow: 1px 2px #a1a0a0;
@@ -89,6 +87,7 @@ body{
     width: 250px;
     border-style: ridge;
     text-shadow: 1px 2px #a1a0a0;
+    margin-left: -10px;
 }
 .all_buttons{
     display: flex;
@@ -125,15 +124,28 @@ body{
 }
 .choice_space{
     display: flex;
-    background-color: bisque;
     width: 680px;
     height: 100px;
-    margin-left: 20px;
+    margin-left: 12px;
     margin-top: 10px;
     justify-content: space-between;
 }
 .choice{
     width: 220px;
     height: 100px;
-    background-color: cadetblue;
 }
+.first_register, .second_register{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.choice{
+    display: flex;
+    flex-direction: column;
+}
+.first_register select, .second_register select{
+    height: 30px;
+    margin-right: 20px;
+}
+.first_register p, .second_register p{
+    margin-left: 10px;
