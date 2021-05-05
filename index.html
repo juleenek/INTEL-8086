@@ -14,48 +14,108 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="main">
       <h2>Symulator procesora INTEL 8086</h2>
       <div class="mini_main">
-        <div class = "input_registers">
+        <div class="input_registers">
           <div class="registers">
-              <div class="register_name">
-                <p>AX</p>
-                <p>BX</p>
-                <p>CX</p>
-                <p>DX</p>
+            <div class="register_name">
+              <p>AX</p>
+              <p>BX</p>
+              <p>CX</p>
+              <p>DX</p>
+            </div>
+            <div class="register_results">
+              <div id="a-result" class="result">
+                <span id="ah-result">00</span>
+                <span id="al-result">00</span>
               </div>
-              <div class="register_results">
-                <div class="result"></div>
-                <div class="result"></div>
-                <div class="result"></div>
-                <div class="result"></div>
+              <div id="b-result" class="result">
+                <span id="bh-result">00</span>
+                <span id="bl-result">00</span>
               </div>
-  
+              <div id="c-result" class="result">
+                <span id="ch-result">00</span>
+                <span id="cl-result">00</span>
+              </div>
+              <div id="d-result" class="result">
+                <span id="dh-result">00</span>
+                <span id="dl-result">00</span>
+              </div>
+            </div>
           </div>
           <div class="high_low">
             <div class="high_register">
-              <div class="ah">AH <input type="text" /></div>
-              <div class="bh">BH <input type="text" /></div>
-              <div class="ch">CH <input type="text" /></div>
-              <div class="dh">DH <input type="text" /></div>
+              <div class="ah">
+                AH
+                <input
+                  type="text"
+                  maxlength="2"
+                  id="ah"
+                  oninput="handleInput(this)"
+                />
+              </div>
+              <div class="bh">
+                BH
+                <input
+                  type="text"
+                  maxlength="2"
+                  id="bh"
+                  oninput="handleInput(this)"
+                />
+              </div>
+              <div class="ch">
+                CH
+                <input
+                  type="text"
+                  maxlength="2"
+                  id="ch"
+                  oninput="handleInput(this)"
+                />
+              </div>
+              <div class="dh">
+                DH
+                <input
+                  type="text"
+                  maxlength="2"
+                  id="dh"
+                  oninput="handleInput(this)"
+                />
+              </div>
             </div>
             <div class="low_register">
-              <div class="al">AL <input type="text" /></div>
-              <div class="bl">BL <input type="text" /></div>
-              <div class="cl">CL <input type="text" /></div>
-              <div class="dl">DL <input type="text" /></div>
+              <div class="al">
+                AL
+                <input type="text" maxlength="2" 
+                id="al" oninput="handleInput(this)" />
+              </div>
+              <div class="bl">
+                BL
+                <input type="text" maxlength="2" id="bl" 
+                oninput="handleInput(this)" />
+              </div>
+              <div class="cl">
+                CL
+                <input type="text" maxlength="2" 
+                id="cl"  oninput="handleInput(this)" />
+              </div>
+              <div class="dl">
+                DL
+                <input type="text" maxlength="2" 
+                id="dl" oninput="handleInput(this)" />
+              </div>
             </div>
           </div>
         </div>
         <div class="all_buttons">
-          <div class="top_buttons"> 
-            <div class="button"><button>MOV</button></div>
+          <div class="top_buttons">
+            <div class="button"><button onclick="mov()">MOV</button></div>
             <div class="button"><button>XCHG</button></div>
           </div>
-          <div class="bottom_buttons"> 
+          <div class="bottom_buttons">
             <div class="button"><button>RANDOM</button></div>
             <div class="button"><button>EMPTY</button></div>
           </div>
@@ -65,66 +125,66 @@
         <div class="choice">
           <div class="first_register">
             <p>Pierwszy rejestr</p>
-            <select name="pr1" id="pr1">
-              <option value="empty"></option>
-              <option value="ax1">AX</option>
-              <option value="bx1">BX</option>
-              <option value="cx1">CX</option>
-              <option value="dx1">DX</option>
+            <select name="first_1" id="first_1" class="first_1">
+              <option class="first_register" value="empty1" id="empty1"></option>
+              <option class="first_register" value="ax1" id="ax1">AX</option>
+              <option class="first_register" value="bx1" id="bx1">BX</option>
+              <option class="first_register" value="cx1" id="cx1">CX</option>
+              <option class="first_register" value="dx1" id="dx1">DX</option>
             </select>
           </div>
           <div class="second_register">
             <p>Drugi rejestr</p>
-            <select name="dr1" id="dr1">
-              <option value="empty"></option>
-              <option value="ax2">AX</option>
-              <option value="bx2">BX</option>
-              <option value="cx2">CX</option>
-              <option value="dx2">DX</option>
+            <select name="second_1" id="second_1" class="second_1">
+              <option class="second_register" value="empty2" id="empty2"></option>
+              <option class="second_register" value="ax2" id="ax2">AX</option>
+              <option class="second_register" value="bx2" id="bx2">BX</option>
+              <option class="second_register" value="cx2" id="cx2">CX</option>
+              <option class="second_register" value="dx2" id="dx2">DX<option>
             </select>
           </div>
         </div>
-        <div class="choice">
+        <div class="choice" style="display: none;">
           <div class="first_register">
-            <p>Pierwszy rejestr</p>
-            <select name="pr2" id="pr2">
-              <option value="empty"></option>
-              <option value="ah1">AH</option>
-              <option value="bh1">BH</option>
-              <option value="ch1">CH</option>
-              <option value="dh1">DH</option>
+            <p>Pierwszy rejestr (H)</p>
+            <select name="first_2" id="first_2">
+              <option class="first_register" value="first_register" id="empty"></option>
+              <option class="first_register" value="first_register" id="ah1">AH</option>
+              <option class="first_register" value="first_register" id="bh1">BH</option>
+              <option class="first_register" value="first_register" id="ch1">CH</option>
+              <option class="first_register" value="first_register" id="dh1">DH</option>
             </select>
           </div>
           <div class="second_register">
-            <p>Drugi rejestr</p>
-            <select name="dr2" id="dr2">
-              <option value="empty"></option>
-              <option value="ah2">AH</option>
-              <option value="bh2">BH</option>
-              <option value="ch2">CH</option>
-              <option value="dh2">DH</option>
+            <p>Drugi rejestr (H)</p>
+            <select name="second_2" id="second_2">
+              <option class="second_register" value="second_register" id="empty"></option>
+              <option class="second_register" value="second_register" id="ah2">AH</option>
+              <option class="second_register" value="second_register" id="bh2">BH</option>
+              <option class="second_register" value="second_register" id="ch2">CH</option>
+              <option class="second_register" value="second_register" id="dh2">DH</option>
             </select>
           </div>
         </div>
-        <div class="choice">
+        <div class="choice" style="display: none;">
           <div class="first_register">
-            <p>Pierwszy rejestr</p>
-            <select name="pr3" id="pr3">
-              <option value="empty"></option>
-              <option value="al1">AL</option>
-              <option value="bl1">BL</option>
-              <option value="cl1">CL</option>
-              <option value="dl1">DL</option>
+            <p>Pierwszy rejestr (L)</p>
+            <select name="first_3" id="first_3">
+              <option class="first_register" value="first_register" id="empty"></option>
+              <option class="first_register" value="first_register" id="al1">AL</option>
+              <option class="first_register" value="first_register" id="bl1">BL</option>
+              <option class="first_register" value="first_register" id="cl1">CL</option>
+              <option class="first_register" value="first_register" id="dl1">DL</option>
             </select>
           </div>
           <div class="second_register">
-            <p>Drugi rejestr</p>
-            <select name="dr3" id="dr3">
-              <option value="empty"></option>
-              <option value="al2">AL</option>
-              <option value="bl2">BL</option>
-              <option value="cl2">CL</option>
-              <option value="dl2">DL</option>
+            <p>Drugi rejestr (L)</p>
+            <select name="second_3" id="second_3">
+              <option class="second_register" value="second_register" id="empty"></option>
+              <option class="second_register" value="second_register" id="al2">AL</option>
+              <option class="second_register" value="second_register" id="bl2">BL</option>
+              <option class="second_register" value="second_register" id="cl2">CL</option>
+              <option class="second_register" value="second_register" id="dl2">DL</option>
             </select>
           </div>
         </div>
