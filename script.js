@@ -1,3 +1,4 @@
+
 numbers = ["1","2","3","4","5","6","7","8","9","0","A","B","C","D","E","F","a","b","c","d","e","f"]
 
 
@@ -21,7 +22,7 @@ function handleInput(event) {
     }
 }
 
-function mov(){
+function movBTN(){
 
     var first = document.getElementsByClassName('first_1')[0].value;
     var second = document.getElementsByClassName('second_1')[0].value;
@@ -33,6 +34,10 @@ function mov(){
     var clresult = document.getElementById('cl-result').innerText;
     var dhresult = document.getElementById('dh-result').innerText;
     var dlresult = document.getElementById('dl-result').innerText;
+
+    if((first === "ax1" && second === "ax2") || (first === "bx1" && second === "bx2") || (first === "cx1" && second === "cx2") || (first === "dx1" && second === "dx2")){
+        alert("Proszę wprowadzić różne rejestry!")
+    }
     
     if(first == 'ax1' && second == 'bx2')
     {
@@ -96,7 +101,7 @@ function mov(){
     }
 }
 
-function xchg(){
+function xchgBTN(){
 
     var first = document.getElementsByClassName('first_1')[0].value;
     var second = document.getElementsByClassName('second_1')[0].value;
@@ -108,6 +113,10 @@ function xchg(){
     var clresult = document.getElementById('cl-result').innerText;
     var dhresult = document.getElementById('dh-result').innerText;
     var dlresult = document.getElementById('dl-result').innerText;
+
+    if((first === "ax1" && second === "ax2") || (first === "bx1" && second === "bx2") || (first === "cx1" && second === "cx2") || (first === "dx1" && second === "dx2")){
+        alert("Proszę wprowadzić różne rejestry!")
+    }
    
     if(first == 'ax1' && second == 'bx2')
     {
@@ -195,7 +204,7 @@ function xchg(){
     }
     
 }
-function empty(){
+function emptyBTN(){
         document.getElementById('ah-result').textContent = "00";
         document.getElementById('al-result').textContent = "00";
         document.getElementById('bh-result').textContent = "00";
@@ -217,8 +226,8 @@ function shuffle(array) {
   
     return array;
 }
-function random(){
-    
+function randomBTN(){
+
     var numbers2 = ["1","2","3","4","5","6","7","8","9","0","A","B","C","D","E","F"];
     
     shuffle(numbers2);
