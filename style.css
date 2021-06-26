@@ -9,7 +9,6 @@ body{
     background-image: url(gif.gif);
    
 }
-
 .main{
     display: flex;
     flex-direction: column;
