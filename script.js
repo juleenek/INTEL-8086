@@ -221,6 +221,7 @@ function random(){
 
     var numbers2 = ["1","2","3","4","5","6","7","8","9","0","A","B","C","D","E","F"];
     
+    
     shuffle(numbers2);
     document.getElementById('ah-result').textContent = numbers2[0] + numbers2[1];
     shuffle(numbers2);
